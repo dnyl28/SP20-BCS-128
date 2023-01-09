@@ -92,3 +92,14 @@ body {
 	font-size: 17px;
 	line-height:150%;
   }
+  @media (max-width: 450px) {
+
+	#full {
+	  text-align: center;
+	}
+  
+	.image {
+	  transform: rotate(0);
+	}
+  }
+  
