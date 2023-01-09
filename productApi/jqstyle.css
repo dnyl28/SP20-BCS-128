@@ -1,0 +1,22 @@
+.recipe {
+  border-bottom: 2px dashed blue;
+  margin-bottom: 5px;
+}
+button{
+  position: relative;
+  border: none;
+  transition: .5s ease-in;
+  z-index: 1;
+}
+button::before, button::after{
+  position: absolute;
+  content: "";
+  z-index: -1;
+}
+/* .btn-1:hover{
+background: #ff96ad;
+box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad, 0 0 200px #ff96ad;
+} */
+.btn-1:hover{
+  box-shadow: inset -10.5em 0 0 0 #ff96ad, inset 10.5em 0 0 0 #ff96ad;
+}

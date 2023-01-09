@@ -1,0 +1,63 @@
+<section class="h-100 h-custom" style="background-color: #eee;">
+    <div class="container h-100 py-5">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card shopping-cart" style="border-radius: 15px;">
+            <div class="card-body text-black">
+  
+              <div class="row">
+                <div class="col-lg-6 px-5 py-4">
+  
+                  <h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Your products</h3>
+                <% for( let i = 0; i < products.length; i++ ) { %>
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="flex-shrink-0">
+                          <img src="/images/uploaded/<%= products[i].image%>"
+                            class="img-fluid" style="width: 150px;" alt="Generic placeholder image" />
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                          <a href="#!" class="float-end text-black"><i class="fas fa-times"></i></a>
+                          <h5 class="text-primary">Name: <%= products[i].name %> </h5>
+                          <h6 style="color: #9e9e9e;">Color: <%= products[i].color %> </h6>
+                          <div class="d-flex align-items-center">
+                            <p class="fw-bold mb-0 me-5 pe-3">Price: <%= products[i].price %> </p>
+                            <p class="fw-bold mb-0 me-5 pe-3">Description: <%= products[i].description %> </p>
+                            <p class="fw-bold mb-0 me-5 pe-3">Storage: <%= products[i].storage %> </p>
+                            <p class="fw-bold mb-0 me-5 pe-3">Quantity: 1</p>
+                          </div>
+                        </div>
+                      </div>
+      
+      
+                      <hr class="mb-4" style="height: 2px; background-color: #1266f1; opacity: 1;">
+                <% } %>
+  
+                  <div class="d-flex justify-content-between px-x">
+                    <p class="fw-bold">Tax:</p>
+                    <p class="fw-bold"><%= 300 %> </p>
+                  </div>
+                  <div class="d-flex justify-content-between p-2 mb-2" style="background-color: #e1f5fe;">
+                    <h5 class="fw-bold mb-0">Total:</h5>
+                    <h5 class="fw-bold mb-0"><%= total+300 %> </h5>
+                  </div>
+  
+                </div>
+                <div class="col-lg-6 px-5 py-4">
+  
+                  <form class="mb-5">
+  
+                    <h5 class="fw-bold mb-5" style="position: absolute; bottom: 0;">
+                      <a href="/"><i class="fas fa-angle-left me-2"></i>Back to shopping</a>
+                    </h5>
+  
+                  </form>
+  
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
